@@ -1,4 +1,4 @@
-function solution(string) {
+export default function breakCamelCase(string) {
   const regex = /([a-z])([A-Z])/g;
   const words = string.replace(regex, '$1 $2');
   return words;
@@ -14,7 +14,8 @@ const solution2 = string => {
   }).join('');
 };
 
-console.log(solution('camelCasing'), '| camel Casing'); 
+// console.log(solution('camelCasing'), '| camel Casing'); 
 console.log(solution2('camelCasing'), '| camel Casing');
-console.log(solution('camelCasingTest'), '| camel Casing Test');
- 
+// console.log(solution('camelCasingTest'), '| camel Casing Test');
+
+// module.exports = breakCamelCase;
