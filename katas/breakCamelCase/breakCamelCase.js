@@ -1,4 +1,4 @@
-export default function breakCamelCase(string) {
+export function breakCamelCase(string) {
   const regex = /([a-z])([A-Z])/g;
   const words = string.replace(regex, '$1 $2');
   return words;
@@ -8,14 +8,8 @@ export default function breakCamelCase(string) {
  * 
  * other solution 
  */
-const solution2 = string => {
+export const breakCamelCase2 = string => {
   return [...string].map((char) => {
     return (char === char.toUpperCase()) ? ` ${char}` : char;
   }).join('');
 };
-
-// console.log(solution('camelCasing'), '| camel Casing'); 
-console.log(solution2('camelCasing'), '| camel Casing');
-// console.log(solution('camelCasingTest'), '| camel Casing Test');
-
-// module.exports = breakCamelCase;

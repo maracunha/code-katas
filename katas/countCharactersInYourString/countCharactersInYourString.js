@@ -1,5 +1,4 @@
-
-function count (string) {
+export function count (string) {
   const result = {};
   string
     .split('')
@@ -7,6 +6,3 @@ function count (string) {
   
   return result;
 }
-
-console.log(count('aba'), { a: 2, b: 1 }); 
-console.log(count(''), {});
